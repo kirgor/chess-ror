@@ -1,0 +1,33 @@
+<div id="menu">
+  <p>Create a new game:</p>
+
+  <form action="/new" method="post">
+    <div>
+      Game ID: <input type="text" name="id"/>
+    </div>
+    <!--<div>-->
+      <!--White name: <input type="text" name="white_player"/>-->
+    <!--</div>-->
+    <!--<div>-->
+      <!--Black name: <input type="text" name="black_player"/>-->
+    <!--</div>-->
+    <div>
+      Start as white: <input type="checkbox" checked="on" name="player"/>
+    </div>
+    <input type="submit" value="OK"/>
+  </form>
+
+  <p id="or">OR</p>
+
+  <p>Join an existing game:</p>
+
+  <form action="/join" method="get">
+    <div>
+      Game ID: <input type="text" name="id"/>
+    </div>
+    <div>
+      Start as white: <input type="checkbox" name="player"/>
+    </div>
+    <input type="submit" value="OK"/>
+  </form>
+</div>

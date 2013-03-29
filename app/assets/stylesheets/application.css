@@ -1,0 +1,150 @@
+body {
+    font-family: "Tahoma", serif;
+}
+
+#board, #menu {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#board {
+    width: 560px;
+}
+
+#menu {
+    position: relative;
+    width: 300px;
+}
+
+.row {
+    height: 70px;
+}
+
+.cell {
+    float: left;
+    width: 70px;
+    height: 70px;
+    background: url("/pieces.png") no-repeat 100px 100px;
+}
+
+.cell[piece-color="black"][piece-type="king"] {
+    background-position: 10px 5px;
+}
+
+.cell[piece-color="black"][piece-type="queen"] {
+    background-position: -100px 5px;
+}
+
+.cell[piece-color="black"][piece-type="rook"] {
+    background-position: -215px 5px;
+}
+
+.cell[piece-color="black"][piece-type="bishop"] {
+    background-position: -325px 5px;
+}
+
+.cell[piece-color="black"][piece-type="knight"] {
+    background-position: -435px 5px;
+}
+
+.cell[piece-color="black"][piece-type="pawn"] {
+    background-position: -545px 5px;
+}
+
+.cell[piece-color="white"][piece-type="king"] {
+    background-position: 10px -90px;
+}
+
+.cell[piece-color="white"][piece-type="queen"] {
+    background-position: -100px -90px;
+}
+
+.cell[piece-color="white"][piece-type="rook"] {
+    background-position: -215px -90px;
+}
+
+.cell[piece-color="white"][piece-type="bishop"] {
+    background-position: -325px -90px;
+}
+
+.cell[piece-color="white"][piece-type="knight"] {
+    background-position: -435px -90px;
+}
+
+.cell[piece-color="white"][piece-type="pawn"] {
+    background-position: -545px -90px;
+}
+
+.cell.even {
+    background-color: #ffce9f;
+}
+
+.cell.odd {
+    background-color: #d18c48;
+}
+
+.cell.selected.even {
+    background-color: #b2f1ff;
+}
+
+.cell.selected.odd {
+    background-color: #7dcbd1;
+}
+
+.cell.move.even {
+    background-color: #bdffba;
+}
+
+.cell.move.odd {
+    background-color: #86d179;
+}
+
+#board span {
+    font-family: "Helvetica", serif;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+#menu div {
+    position: relative;
+    height: 30px;
+}
+
+#menu input {
+    position: absolute;
+    left: 150px;
+    margin: 0;
+}
+
+#menu input[type="submit"] {
+    background-color: #2386a8;
+    color: white;
+    border: none;
+    width: 80px;
+    height: 20px;
+    left: 155px;
+}
+
+#menu input[type="submit"]:hover {
+    background-color: #7dcbd1;
+}
+
+#menu input[type="checkbox"] {
+    top: 5px;
+}
+
+#menu #or {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#promote {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    visibility: hidden;
+}

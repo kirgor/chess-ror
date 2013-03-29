@@ -1,0 +1,25 @@
+<div id="board">
+  <input type="hidden" name="id" value="<%= params[:id] %>"/>
+  <input type="hidden" name="player" value="<%= params[:player] %>"/>
+
+  <% 8.times do |i| %>
+      <div class="row">
+        <% 8.times do |j| %>
+            <div class="cell <%= (i+j)%2 == 0 ? 'even' : 'odd' %>"
+                 position="<%= params[:player] ? (7-i)*8+j : i*8+(7-j) %>">
+            </div>
+        <% end %>
+      </div>
+  <% end %>
+
+  <div id="promote">
+    <div class="cell even selected" piece-type="queen" piece-color="<%= params[:player] ? 'white' : 'black' %>"></div>
+    <div class="cell odd" piece-type="knight" piece-color="<%= params[:player] ? 'white' : 'black' %>"></div>
+    <div class="cell even" piece-type="rook" piece-color="<%= params[:player] ? 'white' : 'black' %>"></div>
+    <div class="cell odd" piece-type="bishop" piece-color="<%= params[:player] ? 'white' : 'black' %>"></div>
+  </div>
+
+  <span id="moving-player"></span>
+  <span id="check-state"></span>
+  <span id="win-state"></span>
+</div>
